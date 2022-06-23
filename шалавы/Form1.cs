@@ -113,8 +113,14 @@ namespace шалавы
                     y = x / float.Parse(textBox1.Text);
                     textBox1.Text = y.ToString();
                     break;
+
                 case 5:
                     y = (float)Math.Pow(x,float.Parse(textBox1.Text));
+                    textBox1.Text = y.ToString();
+                    break;
+
+                case 6:
+                    y = (float)Math.Exp(x);
                     textBox1.Text = y.ToString();
                     break;
             }
@@ -180,7 +186,12 @@ namespace шалавы
         private void button21_Click(object sender, EventArgs e)
         {
             BackColor = Color.Yellow;
-            
+            x = float.Parse(textBox1.Text);
+            textBox1.Clear();
+            count = 6;
+            label1.Text = "e^" + x.ToString();
+            znak = true;
+
         }
 
         private void button20_Click(object sender, EventArgs e)
