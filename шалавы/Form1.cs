@@ -166,7 +166,7 @@ namespace шалавы
 
         private void button6_Click(object sender, EventArgs e)
         {
-            int lenght = textBox1.Text.Lenght - 1;
+            int lenght = textBox1.Text.Length - 1;
             string text = textBox1.Text;
             textBox1.Clear();
             for (int i = 0; i < lenght; i++)
