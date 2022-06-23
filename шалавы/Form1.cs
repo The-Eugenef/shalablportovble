@@ -113,11 +113,16 @@ namespace шалавы
                     y = x / float.Parse(textBox1.Text);
                     textBox1.Text = y.ToString();
                     break;
+                case 5:
+                    y = (float)Math.Pow(x,float.Parse(textBox1.Text));
+                    textBox1.Text = y.ToString();
+                    break;
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            BackColor = Color.Purple;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
             count = 1;
@@ -127,6 +132,7 @@ namespace шалавы
 
         private void button3_Click(object sender, EventArgs e)
         {
+            BackColor = Color.Pink;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
             count = 2;
@@ -136,6 +142,7 @@ namespace шалавы
 
         private void button4_Click(object sender, EventArgs e)
         {
+            BackColor = Color.Green;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
             count = 3;
@@ -145,6 +152,7 @@ namespace шалавы
 
         private void button5_Click(object sender, EventArgs e)
         {
+            BackColor = Color.Blue;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
             count = 4;
@@ -162,6 +170,27 @@ namespace шалавы
         {
             textBox1.Text = "";
             label1.Text = "";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.Yellow;
+            
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.Red;
+            x = float.Parse(textBox1.Text);
+            textBox1.Clear();
+            count = 5;
+            label1.Text = x.ToString() + "^";
+            znak = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
