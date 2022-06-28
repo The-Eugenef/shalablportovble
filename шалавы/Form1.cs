@@ -12,15 +12,16 @@ namespace шалавы
 {
     public partial class Form1 : Form
     {
+        public mathshalav MathClass = new mathshalav();
         public Form1()
         {
             InitializeComponent();
         }
-
-        float x, y;
-        int count;
-        bool znak = true;
-
+        public double x;
+        public double y;
+        public double res;
+        public int count;
+        public bool znak = true;
         private void button10_Click_1(object sender, EventArgs e)
         {
             Button B = (Button)sender;
@@ -29,12 +30,10 @@ namespace шалавы
             else
                 textBox1.Text = textBox1.Text + B.Text;
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
             textBox1.Text = textBox1.Text + ",";
         }
-
         private void button8_Click(object sender, EventArgs e)
         {
             if(znak==true)
@@ -48,43 +47,46 @@ namespace шалавы
                 znak = true;
             }
         }
-
         private void calculate()
         {
             switch (count)
             {
                 case 1:
-                    y = x + float.Parse(textBox1.Text);
-                    textBox1.Text = y.ToString();
+                    y =float.Parse(textBox1.Text);
+                    res = MathClass.Addition(x, y);
+                    textBox1.Text = res.ToString();
                     break;
 
                 case 2:
-                    y = x - float.Parse(textBox1.Text);
-                    textBox1.Text = y.ToString();
+                    y = float.Parse(textBox1.Text);
+                    res = MathClass.Subtraction(x, y);
+                    textBox1.Text = res.ToString();
                     break;
 
                 case 3:
-                    y = x * float.Parse(textBox1.Text);
-                    textBox1.Text = y.ToString();
+                    y = float.Parse(textBox1.Text);
+                    res = MathClass.Multiplication(x, y);
+                    textBox1.Text = res.ToString();
                     break;
 
                 case 4:
-                    y = x / float.Parse(textBox1.Text);
-                    textBox1.Text = y.ToString();
+                    y = float.Parse(textBox1.Text);
+                    res = MathClass.Division(x, y);
+                    textBox1.Text = res.ToString();
                     break;
 
                 case 5:
-                    y = (float)Math.Pow(x,float.Parse(textBox1.Text));
-                    textBox1.Text = y.ToString();
+                    y = float.Parse(textBox1.Text);
+                    res = MathClass.FuncPow(x, y);
+                    textBox1.Text = res.ToString();
                     break;
 
                 case 6:
-                    y = (float)Math.Exp(x);
-                    textBox1.Text = y.ToString();
+                    res = MathClass.Exponent(x);
+                    textBox1.Text = res.ToString();
                     break;
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             BackColor = Color.Purple;
@@ -94,7 +96,6 @@ namespace шалавы
             label1.Text = x.ToString() + "+";
             znak = true;
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             BackColor = Color.Pink;
@@ -104,7 +105,6 @@ namespace шалавы
             label1.Text = x.ToString() + "-";
             znak = true;
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             BackColor = Color.Green;
@@ -114,7 +114,6 @@ namespace шалавы
             label1.Text = x.ToString() + "*";
             znak = true;
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             BackColor = Color.Blue;
@@ -124,24 +123,16 @@ namespace шалавы
             label1.Text = x.ToString() + "/";
             znak = true;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             calculate();
             label1.Text = "";
         }
-
         private void button19_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
             label1.Text = "";
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button21_Click(object sender, EventArgs e)
         {
             BackColor = Color.Yellow;
@@ -152,7 +143,6 @@ namespace шалавы
             znak = true;
 
         }
-
         private void button20_Click(object sender, EventArgs e)
         {
             BackColor = Color.Red;
@@ -162,9 +152,6 @@ namespace шалавы
             label1.Text = x.ToString() + "^";
             znak = true;
         }
-
-
-
         private void button6_Click(object sender, EventArgs e)
         {
             int lenght = textBox1.Text.Length - 1;
@@ -174,7 +161,6 @@ namespace шалавы
             {
                 textBox1.Text = textBox1.Text + text[i];
             }
-
         }
     }
 }
