@@ -17,6 +17,7 @@ namespace шалавы
         {
             InitializeComponent();
         }
+
         public double x;
         public double y;
         public double res;
