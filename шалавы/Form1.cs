@@ -21,7 +21,7 @@ namespace шалавы
         public float x;
         public float y;
         public float res;
-        public int count;
+        public string count;
         public bool znak = true;
 
         private void button10_Click_1(object sender, EventArgs e)
@@ -52,53 +52,14 @@ namespace шалавы
             }
         }
 
-        private void calculate()
-        {
-            switch (count)
-            {
-                case 1:
-                    y =float.Parse(textBox1.Text);
-                    res = MathClass.Addition(x, y);
-                    textBox1.Text = res.ToString();
-                    break;
-
-                case 2:
-                    y = float.Parse(textBox1.Text);
-                    res = MathClass.Subtraction(x, y);
-                    textBox1.Text = res.ToString();
-                    break;
-
-                case 3:
-                    y = float.Parse(textBox1.Text);
-                    res = MathClass.Multiplication(x, y);
-                    textBox1.Text = res.ToString();
-                    break;
-
-                case 4:
-                    y = float.Parse(textBox1.Text);
-                    res = MathClass.Division(x, y);
-                    textBox1.Text = res.ToString();
-                    break;
-
-                case 5:
-                    y = float.Parse(textBox1.Text);
-                    res = MathClass.FuncPow(x, y);
-                    textBox1.Text = res.ToString();
-                    break;
-
-                case 6:
-                    res = MathClass.Exponent(x);
-                    textBox1.Text = res.ToString();
-                    break;
-            }
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
             BackColor = Color.Purple;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 1;
+            count = "+";
             label1.Text = x.ToString() + "+";
             znak = true;
         }
@@ -108,7 +69,7 @@ namespace шалавы
             BackColor = Color.Pink;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 2;
+            count = "-";
             label1.Text = x.ToString() + "-";
             znak = true;
         }
@@ -118,7 +79,7 @@ namespace шалавы
             BackColor = Color.Green;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 3;
+            count = "*";
             label1.Text = x.ToString() + "*";
             znak = true;
         }
@@ -127,13 +88,15 @@ namespace шалавы
             BackColor = Color.Blue;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 4;
+            count = "/";
             label1.Text = x.ToString() + "/";
             znak = true;
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            calculate();
+            y = float.Parse(textBox1.Text);
+            res = MathClass.Calculate(x,y,count);
+            textBox1.Text = res.ToString();
             label1.Text = "";
         }
 
@@ -148,7 +111,7 @@ namespace шалавы
             BackColor = Color.Yellow;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 6;
+            count = "e^";
             label1.Text = "e^" + x.ToString();
             znak = true;
 
@@ -159,7 +122,7 @@ namespace шалавы
             BackColor = Color.Red;
             x = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 5;
+            count = "^";
             label1.Text = x.ToString() + "^";
             znak = true;
         }
