@@ -8,27 +8,27 @@ namespace шалавы
 {
     public class mathshalav
     {
-        public double Addition(double a, double b)
+        public float Addition(float a, float b) 
         {
             return a + b;
         }
-        public double Subtraction(double a, double b)
+        public float Subtraction(float a, float b)
         {
             return a - b;
         }
-        public double Division(double a, double b)
+        public float Division(float a, float b)
         {
             return a / b;
         }
-        public double Multiplication(double a, double b)
+        public float Multiplication(float a, float b)
         {
             return a * b;
         }
-        public double FuncPow(double a, double b)
+        public float FuncPow(float a, float b)
         {
-            return Math.Pow(a, b);
+            return (float)Math.Pow(a, b);
         }
-        public double Exponent(double a)
+        public float Exponent(float a)
         {
             return (float)Math.Exp(a);
         }

@@ -18,11 +18,12 @@ namespace шалавы
             InitializeComponent();
         }
 
-        public double x;
-        public double y;
-        public double res;
+        public float x;
+        public float y;
+        public float res;
         public int count;
         public bool znak = true;
+
         private void button10_Click_1(object sender, EventArgs e)
         {
             Button B = (Button)sender;
@@ -31,10 +32,12 @@ namespace шалавы
             else
                 textBox1.Text = textBox1.Text + B.Text;
         }
+
         private void button7_Click(object sender, EventArgs e)
         {
             textBox1.Text = textBox1.Text + ",";
         }
+
         private void button8_Click(object sender, EventArgs e)
         {
             if(znak==true)
@@ -48,6 +51,7 @@ namespace шалавы
                 znak = true;
             }
         }
+
         private void calculate()
         {
             switch (count)
@@ -88,6 +92,7 @@ namespace шалавы
                     break;
             }
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             BackColor = Color.Purple;
@@ -97,6 +102,7 @@ namespace шалавы
             label1.Text = x.ToString() + "+";
             znak = true;
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             BackColor = Color.Pink;
@@ -106,6 +112,7 @@ namespace шалавы
             label1.Text = x.ToString() + "-";
             znak = true;
         }
+
         private void button4_Click(object sender, EventArgs e)
         {
             BackColor = Color.Green;
@@ -129,11 +136,13 @@ namespace шалавы
             calculate();
             label1.Text = "";
         }
+
         private void button19_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
             label1.Text = "";
         }
+
         private void button21_Click(object sender, EventArgs e)
         {
             BackColor = Color.Yellow;
@@ -144,6 +153,7 @@ namespace шалавы
             znak = true;
 
         }
+
         private void button20_Click(object sender, EventArgs e)
         {
             BackColor = Color.Red;
@@ -153,6 +163,7 @@ namespace шалавы
             label1.Text = x.ToString() + "^";
             znak = true;
         }
+
         private void button6_Click(object sender, EventArgs e)
         {
             int lenght = textBox1.Text.Length - 1;
