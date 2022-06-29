@@ -356,7 +356,7 @@
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(93, 41);
             this.button21.TabIndex = 21;
-            this.button21.Text = "e^x";
+            this.button21.Text = "e^";
             this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 

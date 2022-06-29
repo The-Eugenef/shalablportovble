@@ -110,7 +110,6 @@ namespace шалавы
         {
             BackColor = Color.Yellow;
             x = float.Parse(textBox1.Text);
-            textBox1.Clear();
             count = "e^";
             label1.Text = "e^" + x.ToString();
             znak = true;
